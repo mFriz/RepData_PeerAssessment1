@@ -219,7 +219,7 @@ Task: Create a new factor variable in the dataset with two levels - "weekday" an
 
 
 ```r
-data3 <- data
+data3 <- data2
 data3$weekday <- factor(x = NA, levels = 1:2,  labels = c("weekday", "weekend"))
 for (i in 1:nrow(data3)) {
     if (wday(data3$date[i]) > 1 && wday(data3$date[i]) < 7) {
@@ -249,12 +249,12 @@ head(meanPerInterval3)
 ## Groups: interval
 ## 
 ##   interval weekday meanStepsPerInterval
-## 1        0 weekday            2.3333333
-## 2        0 weekend            0.0000000
-## 3        5 weekday            0.4615385
-## 4        5 weekend            0.0000000
-## 5       10 weekday            0.1794872
-## 6       10 weekend            0.0000000
+## 1        0 weekday           2.25115304
+## 2        0 weekend           0.21462264
+## 3        5 weekday           0.44528302
+## 4        5 weekend           0.04245283
+## 5       10 weekday           0.17316562
+## 6       10 weekend           0.01650943
 ```
 
 ```r

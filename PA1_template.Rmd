@@ -151,7 +151,7 @@ This shows that the mean was not changed at all upon filling in the missing valu
 Task: Create a new factor variable in the dataset with two levels - "weekday" and "weekend" indicating whether a given date is a weekday or weekend day.
 
 ```{r create_weekday_variable, cache=TRUE}
-data3 <- data
+data3 <- data2
 data3$weekday <- factor(x = NA, levels = 1:2,  labels = c("weekday", "weekend"))
 for (i in 1:nrow(data3)) {
     if (wday(data3$date[i]) > 1 && wday(data3$date[i]) < 7) {
